@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
 model,feature_names = joblib.load("model/churn_model.pkl")
 
