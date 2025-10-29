@@ -3,7 +3,11 @@ import pandas as pd
 import joblib
 import os
 
-model,feature_names = joblib.load("model/churn_model.pkl")
+from pathlib import Path
+# import joblib
+
+model_path = Path(__file__).parent / 'model' / 'churn_model.pkl'
+model, feature_names = joblib.load(model_path)
 
 st.title("📊 Telco Customer Churn Prediction App")
 st.write("Predict whether a customer will churn or not based on their details.")
